@@ -1,0 +1,265 @@
+@import '../../global/breakpoints';
+@import '../../global/colors';
+.footer {
+  border-bottom: 2px solid $blue;
+  padding: 80px 0 120px;
+  @include media-breakpoint-up(md) {
+    padding: 80px 0 40px;
+  }
+  .content-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+    .box-logos-footer {
+      .box-email-footer {
+        .titulo-email {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%; /* 26.4px */
+          letter-spacing: 0.48px;
+          margin-bottom: 16px;
+          text-align: center;
+          @include media-breakpoint-up(md) {
+            text-align: initial;
+          }
+        }
+        .email-footer {
+          margin-bottom: 40px;
+          .cf7-custom-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px solid #d4d5dc;
+            gap: 16px;
+            p {
+              height: 28px;
+              display: flex;
+              position: relative;
+              align-items: center;
+            }
+            .cf7-icon-email {
+              width: 32px;
+              display: flex;
+              height: 32px;
+              position: absolute;
+              left: 0;
+            }
+            .wpcf7-form-control-wrap {
+              position: relative;
+              width: 270px;
+              @include media-breakpoint-up(md) {
+                width: 300px;
+              }
+
+              .wpcf7-not-valid-tip {
+                position: absolute;
+                bottom: -50px;
+                left: -7px;
+              }
+            }
+            .wpcf7-email {
+              color: #36373b;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              max-width: 228px;
+              padding-left: 24px;
+              @include media-breakpoint-up(md) {
+                max-width: 300px;
+                padding-left: 36px;
+                transform: translateX(-10px);
+              }
+            }
+            .wpcf7-submit {
+            }
+            .wpcf7-spinner {
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              width: 20px;
+              height: 20px;
+            }
+          }
+          .wpcf7-response-output {
+            border-color: transparent;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 145%;
+          }
+        }
+      }
+      .box-social-midias-footer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        .titulo-social {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%; /* 26.4px */
+          letter-spacing: 0.48px;
+          margin-bottom: 16px;
+          text-align: center;
+          @include media-breakpoint-up(md) {
+            text-align: initial;
+          }
+        }
+        .box-social-midias {
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          align-items: center;
+          justify-content: center;
+          @include media-breakpoint-up(md) {
+            align-items: initial;
+            justify-content: initial;
+          }
+          svg {
+            transition: 0.6s;
+            &:hover {
+              scale: 1.05;
+            }
+          }
+        }
+      }
+      .box-links-politicas {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-breakpoint-up(md) {
+          align-items: initial;
+          flex-direction: row;
+        }
+        .bullet-separator {
+          display: none;
+          @include media-breakpoint-up(md) {
+            display: flex;
+          }
+        }
+        .row-links {
+          a {
+            position: relative;
+            &::after {
+              content: '';
+              bottom: -4px;
+              width: 0;
+              height: 2px;
+              transition: 0.6s;
+              left: 0;
+              position: absolute;
+              background-color: #36373b;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+            p {
+              color: #36373b;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 110%; /* 16px */
+            }
+          }
+        }
+      }
+    }
+    .box-links-footer {
+      transition: 0.6s;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      @include media-breakpoint-up(md) {
+        align-items: initial;
+        flex-direction: row;
+      }
+      @include media-breakpoint-up(desk) {
+        gap: 120px;
+      }
+      .content-links {
+        .title-box-links {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%; /* 26.4px */
+          letter-spacing: 0.48px;
+          margin-bottom: 24px;
+          text-align: center;
+          @include media-breakpoint-up(md) {
+            text-align: initial;
+          }
+        }
+        .box-links {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+          @include media-breakpoint-up(md) {
+            align-items: initial;
+          }
+          a {
+            position: relative;
+            width: fit-content;
+            &::after {
+              content: '';
+              bottom: -4px;
+              width: 0;
+              height: 2px;
+              transition: 0.6s;
+              left: 0;
+              position: absolute;
+              background-color: $grey;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+            p {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-copy {
+    .box-copy {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+      }
+      p {
+        color: #a6a6a6;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 16px */
+      }
+    }
+  }
+}

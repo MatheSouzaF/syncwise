@@ -1,0 +1,49 @@
+/* Main Color */
+
+
+/* Neutral Colors */
+
+$grey-0: #FFF;
+$grey-600: #DFDFDF;
+$grey-700: #B1B1B1;
+$grey-800: #646464;
+$grey-900: #181818;
+$grey-1000: #000;
+
+$blue: #04174F;
+$purple: #2A2459;
+$grey: #36373B;
+$grey-100: #838690;
+.color-grey-0{
+    color: $grey-0;
+}
+.color-grey-600{
+    color: $grey-600;
+}
+.color-grey-700{
+    color: $grey-700;
+}
+.color-grey-800{
+    color: $grey-800;
+}
+.color-grey-900{
+    color: $grey-900;
+}
+.color-grey-1000{
+    color: $grey-1000;
+}
+.input-color-form{
+    color: #656565;
+}
+.blue-txt{
+    color: $blue;
+}
+.purple-txt{
+    color: $purple;
+}
+.grey-txt{
+    color: $grey;
+}
+.grey-100-txt{
+    color: $grey-100;
+}

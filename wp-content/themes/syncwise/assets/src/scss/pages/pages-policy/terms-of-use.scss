@@ -1,0 +1,43 @@
+@import '../../global/breakpoints';
+@import '../../global/colors';
+body.page-template-terms-of-use {
+ .china-policy {
+    padding: 120px 0;
+    max-width: 880px;
+    margin: 0 auto;
+    .title-page {
+      border-bottom: initial;
+      margin-bottom: initial;
+      padding: 32px 0 52px;
+    }
+    .description-china-policy {
+      p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 145%;
+        color: #36373b;
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 145%;
+          padding-bottom: 8px;
+          color: #36373b;
+          position: relative;
+          list-style-type: circle;
+          left: 28px;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

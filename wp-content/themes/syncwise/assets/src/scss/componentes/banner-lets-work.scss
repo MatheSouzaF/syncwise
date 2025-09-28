@@ -1,0 +1,64 @@
+@import '../global/breakpoints';
+@import '../global/colors';
+.banner-lets-work {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  padding: 35px 160px 45px;
+  border-radius: 40px;
+  background: #04174f;
+  overflow: hidden;
+  text-decoration: none; // remove underline
+  mix-blend-mode: luminosity;
+
+  
+
+  .background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    color: #fff;
+    font-size: 34px;
+    span {
+      font-size: 44px;
+    }
+  }
+
+  .cta-text {
+    display: inline-flex;
+    padding: 16px 40px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    line-height: 100%;
+    transition: 0.6s;
+  }
+
+  &:hover{
+    .cta-text{
+      background-color: #fff;
+      color: #04174f;
+    }
+  }
+}
