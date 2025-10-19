@@ -104,18 +104,18 @@ body.page-template-contact {
   }
   .formulario {
     background: #04174f;
-    padding: 80px 24px;
+    padding: 56px 24px;
     @include media-breakpoint-up(md) {
       margin: 0 auto;
       width: fit-content;
       border-radius: 40px;
-      padding: 80px 125px;
+      padding: 56px 125px;
     }
     h3 {
       color: #fff;
       font-style: normal;
       font-weight: 700;
-      line-height: 110%; /* 26.4px */
+      line-height: 150%; /* 26.4px */
       letter-spacing: 0.48px;
       font-size: 22px;
       margin-bottom: 24px;

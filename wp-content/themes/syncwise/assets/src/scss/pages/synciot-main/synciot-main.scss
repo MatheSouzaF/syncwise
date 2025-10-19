@@ -1049,8 +1049,12 @@ body.page-template-syncIoT-main {
                     }
                   }
                 }
+                .formulario {
+                  margin-bottom: 60px;
+                }
                 form {
                   label {
+                    width: 100%;
                     .label {
                       color: #00205b;
                       font-family: 'Nunito Sans', sans-serif;
@@ -1067,6 +1071,7 @@ body.page-template-syncIoT-main {
                         line-height: 145%;
                       }
                     }
+
                     input,
                     textarea,
                     select {
@@ -1095,6 +1100,11 @@ body.page-template-syncIoT-main {
                       outline: none; /* Remove a borda azul padrão do navegador */
                     }
                   }
+                  p {
+                    max-height: 100px;
+                    margin-bottom: 10px;
+                    display: flex;
+                  }
                   .wpcf7-submit {
                     cursor: pointer;
                     margin-top: 32px;
@@ -1112,6 +1122,9 @@ body.page-template-syncIoT-main {
                       background: #004b87;
                       color: #fff;
                     }
+                  }
+                  .wpcf7-response-output {
+                    display: none;
                   }
                 }
               }
@@ -1340,8 +1353,8 @@ body.page-template-syncIoT-main {
                 flex-direction: row;
                 gap: 12px;
                 .row-file-downloads {
-                        width: 100px;
-                    height: 120px;
+                  width: 100px;
+                  height: 120px;
                   a {
                     cursor: pointer;
                     height: 100%;
@@ -1411,6 +1424,7 @@ body.page-template-syncIoT-main {
               }
               form {
                 label {
+                  width: 100%;
                   .label {
                     color: #fff;
                     font-family: 'Nunito Sans', sans-serif;
@@ -1455,6 +1469,10 @@ body.page-template-syncIoT-main {
                     outline: none; /* Remove a borda azul padrão do navegador */
                   }
                 }
+                p {
+                  max-height: 100px;
+                  display: flex;    margin-bottom: 10px;
+                }
                 .wpcf7-submit {
                   cursor: pointer;
                   margin-top: 32px;
@@ -1468,6 +1486,9 @@ body.page-template-syncIoT-main {
                   font-weight: 700;
                   line-height: 100%; /* 16px */
                   transition: 0.6s;
+                }
+                .wpcf7-response-output {
+                  display: none;
                 }
               }
             }

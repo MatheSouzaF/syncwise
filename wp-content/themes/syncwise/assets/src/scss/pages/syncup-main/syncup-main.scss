@@ -688,85 +688,9 @@ body.page-template-syncup-main {
     }
   }
   .lte {
-    padding-bottom: 80px;
     .wrapper {
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-      flex-direction: column;
-      justify-content: center;
       @include media-breakpoint-up(md) {
-        gap: 80px;
-        flex-direction: row;
-      }
-      .box-conteudo {
-        width: 100%;
-        max-width: 640px;
-        .title-conteudo-lte {
-          color: #04174f;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 130%; /* 44.2px */
-          margin-bottom: 40px;
-          font-size: 30px;
-          @include media-breakpoint-up(md) {
-            font-size: 34px;
-          }
-        }
-        .label-conteudo-lte {
-          color: #04174f;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 110%; /* 26.4px */
-          letter-spacing: 0.48px;
-          margin-bottom: 16px;
-          font-size: 20px;
-          @include media-breakpoint-up(md) {
-            font-size: 24px;
-          }
-        }
-        .description-conteudo-lte {
-          color: #04174f;
-          font-style: normal;
-          font-weight: 400;
-          margin-bottom: 40px;
-          line-height: 145%; /* 29px */
-          font-size: 18px;
-          @include media-breakpoint-up(md) {
-            font-size: 20px;
-          }
-        }
-        .box-repetidor {
-          display: flex;
-          flex-direction: column;
-          .row-text {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 14px;
-            padding: 20px 0;
-            border-bottom: 1px solid #d4d5dc;
-            &:first-child {
-              padding-top: 0;
-            }
-            &:last-child {
-              border-bottom: none;
-            }
-            .text-item {
-              color: #000000;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 145%;
-            }
-          }
-        }
-      }
-      .box-img {
-        img {
-          border-radius: 24px;
-          overflow: hidden;
-        }
+        flex-direction: row-reverse;
       }
     }
   }

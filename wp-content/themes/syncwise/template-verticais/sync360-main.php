@@ -555,6 +555,8 @@ get_header();
 
 <div class="tabs-content sync software" id="tab-6">
     <div class="wrapper">
+
+       
         <div class="box-content">
             <p class="label-synciq"><?php echo get_field('label_manufacturing'); ?></p>
             <div class="box-svg">
@@ -581,7 +583,7 @@ get_header();
                                 <path d="M8 14.2773L12.5962 18.8735L20.3744 11.0954" stroke="white" stroke-width="2" />
                             </svg>
                             <p class="item-text">
-                                <?php echo get_sub_field('label_item_repeater_manufacturing'); ?>
+                                <?php echo get_sub_field('label_itens_repeater_manufacturing'); ?>
                             </p>
                         </div>
                     <?php endwhile;
@@ -590,8 +592,9 @@ get_header();
             <p class="description-synciq">
                 <?php echo get_field('description_manufacturing_02'); ?>
             </p>
+
         </div>
-        <div class="box-image-video">
+         <div class="box-image-video">
             <?php
             $image = get_field('image_manufacturing');
             if ($image):
@@ -600,7 +603,6 @@ get_header();
                 <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
             <?php endif; ?>
         </div>
-
     </div>
 </div>
 <?php

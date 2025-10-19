@@ -492,10 +492,10 @@
         },
         {
             "key": "field_687fec3e0dbe5",
-            "label": "Label LTE Global SiM",
-            "name": "label_lte_global_sim",
+            "label": "SVG  LTE Global SiM",
+            "name": "svg__lte_global_sim",
             "aria-label": "",
-            "type": "text",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -504,12 +504,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
         },
         {
             "key": "field_687fec5d0dbe6",
@@ -579,11 +579,32 @@
             ]
         },
         {
-            "key": "field_687fecc20dbe9",
-            "label": "Image LTE Global SiM",
-            "name": "image_lte_global_sim",
+            "key": "field_68ebcde9e3865",
+            "label": "Description LTE Global SiM 02",
+            "name": "description_lte_global_sim_02",
             "aria-label": "",
-            "type": "image",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_68ebce07e3866",
+            "label": "Link Lets Talk Sim",
+            "name": "link_lets_talk_sim",
+            "aria-label": "",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -593,16 +614,136 @@
                 "id": ""
             },
             "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_68ebce19e3867",
+            "label": "Video or Image Global",
+            "name": "video_or_image_global",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_68ebce1bc4bc0": {
+                    "key": "layout_68ebce1bc4bc0",
+                    "name": "video_global_sim",
+                    "label": "Video Global SIM",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68ebce41e3868",
+                            "label": "Video Global SIM",
+                            "name": "video_global_sim_",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_68ebce53e3869",
+                            "label": "Video Modal",
+                            "name": "video_modal",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_68ebce64e386a": {
+                    "key": "layout_68ebce64e386a",
+                    "name": "image_global_sim",
+                    "label": "Image Global Sim",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68ebce79e386c",
+                            "label": "Image Global Sim",
+                            "name": "imagem_global_sim",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_68ebce83e386d",
+                            "label": "Video modal imagem Global Sim",
+                            "name": "video_modal_imagem_global_sim",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
         },
         {
             "key": "field_688286675335d",
@@ -945,5 +1086,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758406775
+    "modified": 1760286761
 }

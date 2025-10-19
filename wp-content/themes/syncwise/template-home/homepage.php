@@ -12,40 +12,40 @@ get_header();
             if (have_rows('banner_swiper_home')):
                 while (have_rows('banner_swiper_home')):
                     the_row(); ?>
-                    <div class="swiper-slide">
-                        <div class="background">
+            <div class="swiper-slide">
+                <div class="background">
 
-                            <?php
+                    <?php
                             $video_background = get_sub_field('banner_video');
                             if ($video_background): ?>
-                                <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>"
-                                    muted loop play></video>
-                            <?php endif; ?>
-                            <?php
+                    <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>"
+                        muted loop play></video>
+                    <?php endif; ?>
+                    <?php
                             $image = get_sub_field('banner_image');
                             if ($image):
                                 $image_url = $image['url'];
                                 $image_alt = $image['alt']; ?>
-                                <img class="img-desktop" src="<?php echo esc_url($image_url); ?>"
-                                    alt="<?php echo esc_attr($image_alt); ?>">
-                            <?php endif; ?>
-                            <?php
+                    <img class="img-desktop" src="<?php echo esc_url($image_url); ?>"
+                        alt="<?php echo esc_attr($image_alt); ?>">
+                    <?php endif; ?>
+                    <?php
                             $imageMobile = get_sub_field('banner_image_mobile');
                             if ($imageMobile):
                                 $image_url = $imageMobile['url'];
                                 $image_alt = $imageMobile['alt']; ?>
-                                <img class="img-mobile" src="<?php echo esc_url($image_url); ?>"
-                                    alt="<?php echo esc_attr($image_alt); ?>">
-                            <?php endif; ?>
-                        </div>
-                        <div class="wrapper">
-                            <div class="box-textos">
-                                <h1 class="title-banner"><?php echo get_sub_field('banner_title'); ?></h1>
-                                <p class="description"><?php echo get_sub_field('banner_description'); ?></p>
-                            </div>
-                        </div>
+                    <img class="img-mobile" src="<?php echo esc_url($image_url); ?>"
+                        alt="<?php echo esc_attr($image_alt); ?>">
+                    <?php endif; ?>
+                </div>
+                <div class="wrapper">
+                    <div class="box-textos">
+                        <h1 class="title-banner"><?php echo get_sub_field('banner_title'); ?></h1>
+                        <p class="description"><?php echo get_sub_field('banner_description'); ?></p>
                     </div>
-                <?php endwhile;
+                </div>
+            </div>
+            <?php endwhile;
             endif;
             ?>
         </div>
@@ -63,24 +63,25 @@ get_header();
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    new Swiper('.swiper-banner', {
-        slidesPerView: 1,
-        effect: 'fade', // Ativa o fade
-        autoplay: {
-            delay: 5000, // 5 segundos
-            disableOnInteraction: false, // continua o autoplay mesmo após interação do usuário
-        },
-        fadeEffect: {
-            crossFade: true, // Transição suave entre slides
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-btn-next',
-            prevEl: '.swiper-btn-prev',
-        },
-    });
+new Swiper('.swiper-banner', {
+    slidesPerView: 1,
+    effect: 'fade', // Ativa o fade
+    autoplay: {
+        delay: 10000, // 10 segundos
+        disableOnInteraction: false, // continua o autoplay mesmo após interação do usuário
+    },
+    fadeEffect: {
+        crossFade: true, // Transição suave entre slides
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-btn-next',
+        prevEl: '.swiper-btn-prev',
+    },
+});
 </script>
 
 
@@ -102,49 +103,49 @@ get_header();
         if (have_rows('verticals')):
             while (have_rows('verticals')):
                 the_row(); ?>
-                <div class="box-expertise">
-                    <div class="background">
-                        <?php
+        <div class="box-expertise">
+            <div class="background">
+                <?php
                         $image = get_sub_field('image_verticals');
                         if ($image):
                             $image_url = $image['url'];
                             $image_alt = $image['alt']; ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
-                        <?php endif; ?>
-                        <?php
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                <?php endif; ?>
+                <?php
                         $video_background = get_sub_field('video_background_vertical');
                         if ($video_background): ?>
-                            <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>" muted
-                                loop play></video>
-                        <?php endif; ?>
+                <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>" muted
+                    loop play></video>
+                <?php endif; ?>
 
-                    </div>
-                    <div class="box-textos">
-                        <p class="label-our-expertise"><?php echo get_sub_field('label_verticals'); ?></p>
-                        <div class="box-svg title-our-expertise">
-                            <?php $svg_file = get_sub_field('svg_verticals');
+            </div>
+            <div class="box-textos">
+                <p class="label-our-expertise"><?php echo get_sub_field('label_verticals'); ?></p>
+                <div class="box-svg title-our-expertise">
+                    <?php $svg_file = get_sub_field('svg_verticals');
                             if ($svg_file && pathinfo($svg_file['url'], PATHINFO_EXTENSION) === 'svg') {
                                 echo '<i class="element">';
                                 echo file_get_contents($svg_file['url']);
                                 echo '</i>';
                             } ?>
-                        </div>
-                        <p class="description-our-expertise"><?php echo get_sub_field('description_verticals'); ?></p>
+                </div>
+                <p class="description-our-expertise"><?php echo get_sub_field('description_verticals'); ?></p>
 
-                        <?php
+                <?php
                         $link = get_sub_field('link_verticals');
                         if ($link):
                             $link_url = $link['url'];
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                            <a class="box-subtopic" href="<?php echo esc_url($link_url); ?>"
-                                target="<?php echo esc_attr($link_target); ?>">
-                                <p class=""><?php echo esc_html($link_title); ?></p>
-                            </a>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            <?php endwhile;
+                <a class="box-subtopic" href="<?php echo esc_url($link_url); ?>"
+                    target="<?php echo esc_attr($link_target); ?>">
+                    <p class=""><?php echo esc_html($link_title); ?></p>
+                </a>
+                <?php endif; ?>
+            </div>
+        </div>
+        <?php endwhile;
         endif; ?>
     </div>
 
@@ -157,46 +158,46 @@ get_header();
                     if (have_rows('verticals')):
                         while (have_rows('verticals')):
                             the_row(); ?>
-                            <div class="swiper-slide">
-                                <div class="box-expertise">
-                                    <div class="background">
-                                        <?php
+                    <div class="swiper-slide">
+                        <div class="box-expertise">
+                            <div class="background">
+                                <?php
                                         $image = get_sub_field('image_verticals');
                                         if ($image):
                                             $image_url = $image['url'];
                                             $image_alt = $image['alt']; ?>
-                                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="box-textos">
-                                        <p class="label-our-expertise"><?php echo get_sub_field('label_verticals'); ?></p>
-                                        <div class="box-svg title-our-expertise">
-                                            <?php $svg_file = get_sub_field('svg_verticals');
+                                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                                <?php endif; ?>
+                            </div>
+                            <div class="box-textos">
+                                <p class="label-our-expertise"><?php echo get_sub_field('label_verticals'); ?></p>
+                                <div class="box-svg title-our-expertise">
+                                    <?php $svg_file = get_sub_field('svg_verticals');
                                             if ($svg_file && pathinfo($svg_file['url'], PATHINFO_EXTENSION) === 'svg') {
                                                 echo '<i class="element">';
                                                 echo file_get_contents($svg_file['url']);
                                                 echo '</i>';
                                             } ?>
-                                        </div>
-                                        <p class="description-our-expertise">
-                                            <?php echo get_sub_field('description_verticals'); ?>
-                                        </p>
+                                </div>
+                                <p class="description-our-expertise">
+                                    <?php echo get_sub_field('description_verticals'); ?>
+                                </p>
 
-                                        <?php
+                                <?php
                                         $link = get_sub_field('link_verticals');
                                         if ($link):
                                             $link_url = $link['url'];
                                             $link_title = $link['title'];
                                             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                            <a class="box-subtopic" href="<?php echo esc_url($link_url); ?>"
-                                                target="<?php echo esc_attr($link_target); ?>">
-                                                <p class=""><?php echo esc_html($link_title); ?></p>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
+                                <a class="box-subtopic" href="<?php echo esc_url($link_url); ?>"
+                                    target="<?php echo esc_attr($link_target); ?>">
+                                    <p class=""><?php echo esc_html($link_title); ?></p>
+                                </a>
+                                <?php endif; ?>
                             </div>
-                        <?php endwhile;
+                        </div>
+                    </div>
+                    <?php endwhile;
                     endif; ?>
                 </div>
                 <div class="box-buttons">
@@ -226,15 +227,15 @@ get_header();
                 if (have_rows('logos_relationships')):
                     while (have_rows('logos_relationships')):
                         the_row(); ?>
-                        <div class="box-svg">
-                            <?php $svg_file = get_sub_field('svg_relationships');
+                <div class="box-svg">
+                    <?php $svg_file = get_sub_field('svg_relationships');
                             if ($svg_file && pathinfo($svg_file['url'], PATHINFO_EXTENSION) === 'svg') {
                                 echo '<i class="element">';
                                 echo file_get_contents($svg_file['url']);
                                 echo '</i>';
                             } ?>
-                        </div>
-                    <?php endwhile;
+                </div>
+                <?php endwhile;
                 endif;
                 ?>
 
@@ -246,10 +247,10 @@ get_header();
             $link_url = $link['url'];
             $link_title = $link['title'];
             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-            <a class="link-relationships" href="<?php echo esc_url($link_url); ?>"
-                target="<?php echo esc_attr($link_target); ?>">
-                <p class="blue-txt"><?php echo get_field('label_link_relationships'); ?></p>
-            </a>
+        <a class="link-relationships" href="<?php echo esc_url($link_url); ?>"
+            target="<?php echo esc_attr($link_target); ?>">
+            <p class="blue-txt"><?php echo get_field('label_link_relationships'); ?></p>
+        </a>
         <?php endif; ?>
     </div>
 
@@ -262,22 +263,22 @@ get_header();
         <?php
         $video_background = get_field('video_about_syncwise');
         if ($video_background): ?>
-            <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>" muted loop
-                play></video>
+        <video class="video-banner" autoplay="autoplay" src="<?php echo esc_url($video_background); ?>" muted loop
+            play></video>
         <?php endif; ?>
         <?php
         $image = get_field('image_desktop_about_syncwise');
         if ($image):
             $image_url = $image['url'];
             $image_alt = $image['alt']; ?>
-            <img class="img-desktop" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+        <img class="img-desktop" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
         <?php endif; ?>
         <?php
         $imageMobile = get_field('image_mobile_about_syncwise');
         if ($imageMobile):
             $image_url = $imageMobile['url'];
             $image_alt = $imageMobile['alt']; ?>
-            <img class="img-mobile" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+        <img class="img-mobile" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
         <?php endif; ?>
     </div>
     <div class="wrapper">
@@ -290,10 +291,10 @@ get_header();
             $link_url = $link['url'];
             $link_title = $link['title'];
             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-            <a class="link-about-syncwise" href="<?php echo esc_url($link_url); ?>"
-                target="<?php echo esc_attr($link_target); ?>">
-                <p class="color-grey-0"><?php echo get_field('label_link_about_syncwise'); ?></p>
-            </a>
+        <a class="link-about-syncwise" href="<?php echo esc_url($link_url); ?>"
+            target="<?php echo esc_attr($link_target); ?>">
+            <p class="color-grey-0"><?php echo get_field('label_link_about_syncwise'); ?></p>
+        </a>
         <?php endif; ?>
 
     </div>

@@ -1149,6 +1149,73 @@
             "new_lines": ""
         },
         {
+            "key": "field_68ebda5ccba91",
+            "label": "Repeater Itens Manufacturing",
+            "name": "repeater_itens_manufacturing",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_68ebda77cba92",
+                    "label": "Label Itens Repeater Manufacturing",
+                    "name": "label_itens_repeater_manufacturing",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_68ebda5ccba91"
+                }
+            ]
+        },
+        {
+            "key": "field_68ebda88cba93",
+            "label": "Description Manufacturing 02'",
+            "name": "description_manufacturing_02",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_687ed15d43e9d",
             "label": "Image Manufacturing",
             "name": "image_manufacturing",
@@ -1245,5 +1312,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758555361
+    "modified": 1760287383
 }
